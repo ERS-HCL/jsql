@@ -5,29 +5,14 @@
  * For more details take a look at the Java Libraries chapter in the Gradle
  * User Manual available at https://docs.gradle.org/6.0/userguide/java_library_plugin.html
  */
-
-plugins {
-    // Apply the java-library plugin to add support for Java Library
-    id 'java-library'
+allprojects {
+	group = 'org.kmrn.jsql'
+    version = '1.0'
 }
 
-repositories {
-    // Use jcenter for resolving dependencies.
-    // You can declare any Maven/Ivy/file repository here.
-    jcenter()
-}
-
-dependencies {
-    
-    implementation group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
-    implementation 'net.bytebuddy:byte-buddy:1.9.10'
-    implementation 'io.reactivex.rxjava3:rxjava:3.0.2'
-    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
-    
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
-    
-    
-    testCompileOnly 'org.projectlombok:lombok:1.18.12'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
-}
+subprojects {
+	apply plugin: 'java-library'
+	repositories {
+        mavenCentral()
+    }
+}	

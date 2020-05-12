@@ -1,0 +1,17 @@
+dependencies {
+	implementation 'com.google.auto.service:auto-service:1.0-rc6'
+	
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+    implementation 'net.bytebuddy:byte-buddy:1.9.10'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.2'
+    implementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
+    
+    compileOnly 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+	annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+//	annotationProcessor 'jsql'
+    
+    
+    testCompileOnly 'org.projectlombok:lombok:1.18.12'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
+}
